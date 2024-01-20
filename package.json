@@ -1,6 +1,6 @@
 {
   "name": "rapid-api-helper",
-  "version": "2.0.50",
+  "version": "2.0.51",
   "description": "A wrapper for RapidAPI to help use Techmap's Job Data APIs (https://jobdatafeeds.com/job-api)",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
