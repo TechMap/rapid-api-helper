@@ -37,6 +37,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/TechMap/rapid-api-helper.git"
+    "url": "git+https://github.com/TechMap/rapid-api-helper.git"
   }
 }
