@@ -10,7 +10,8 @@
   "scripts": {
     "clean": "rm -rf ./build/*",
     "build": "yarn run clean && tsc",
-    "pub": "git add . && git commit -m \"Updates\" && git push && npm version patch && npm run build && npm publish",
+    "commit": "git add . && git commit -m \"Updates\" && git push",
+    "publish": "npm version patch && npm run build && npm publish",
     "test": "yarn run clean && jest --no-cache",
     "testWatch": "jest --watchAll --no-cache",
     "test:ci": "jest"
