@@ -38,45 +38,12 @@ The RAPIDAPI_API class provides methods for making API requests to different end
 
 ```ts
     const response = await jobsAPI.search({
-        t: 'Data Scientist',    // t for title
-        c: 'us',                // c for countryCode
-        d: '2024-01-01',        // d for day
-        p: 1                    // p for page
+        title: 'Data Scientist',
+        dateCreated: '2024-01-01',
+        page: 1
     });
 
     console.log(response.data);
-
-// const response = await jobsAPI.search({
-//   country: 'US',
-//   page: 1,
-//   pageSize: 10,
-// });
-
-// const jobPostings: JobPosting[] = response.data;
-
-import axios from 'axios';
-
-const options = {
-  method: 'GET',
-  url: 'https://daily-international-job-postings.p.rapidapi.com/api/v2/jobs/search',
-  params: {
-    dateCreated: '2023-11-01',
-    page: '1',
-    timezoneMin: '-8',
-    timezoneMax: '-5'
-  },
-  headers: {
-    'X-RapidAPI-Key': 'c0c429bd4emsh13a168bc9b16e90p190d7ejsn16a3aa13c0df',
-    'X-RapidAPI-Host': 'daily-international-job-postings.p.rapidapi.com'
-  }
-};
-
-try {
-	const response = await axios.request(options);
-	console.log(response.data);
-} catch (error) {
-	console.error(error);
-}
 ```
 
 The `search` method returns a promise that resolves to an object containing the API response. The data property of the response object contains an array of up to 10 JobPosting objects.
