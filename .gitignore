@@ -1,4 +1,7 @@
+.env.local
+
 build
 node_modules
 tests
-.env.local
+
+yarn-error.log
