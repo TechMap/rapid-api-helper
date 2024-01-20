@@ -1,0 +1,41 @@
+{
+  "name": "rapid-api-helper",
+  "version": "2.0.1-beta",
+  "description": "A wrapper for RapidAPI to help use Techmap's Job Data APIs (https://jobdatafeeds.com/job-api)",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
+  "scripts": {
+    "clean": "rm -rf ./build/*",
+    "build": "yarn run clean && tsc",
+    "pub": "git add . && git commit -m \"Updates\" && git push && npm version patch && npm run build && npm publish",
+    "test": "yarn run clean && jest --no-cache",
+    "testWatch": "jest --watchAll --no-cache",
+    "test:ci": "jest"
+  },
+  "keywords": [
+    "rapidapi",
+    "techmap",
+    "job postings"
+  ],
+  "author": "Jörg Rech",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "@types/supertest": "^6.0.2",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "axios": "^1.6.5",
+    "dotenv": "^16.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TechMap/rapid-api-helper.git"
+  }
+}
